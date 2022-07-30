@@ -10,7 +10,7 @@ var corsOptions = {
   
 app.use(cors(corsOptions));
 app.use(express.json());
-app.use(express.static(path.join("/var/www/html/elogbooks-interview/client", 'build')));
+
 app.use("/api/properties", propertyRoutes);
 app.use("/api/jobs", jobRoutes);
 
