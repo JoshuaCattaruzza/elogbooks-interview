@@ -10,8 +10,8 @@ import ToastContainer from 'react-bootstrap/ToastContainer';
 
 const CreateJobs = () =>{
 
-const propertyUrl = "http://localhost:4200/api/properties/all";
-const createJobUrl = "http://localhost:4200/api/jobs/create";
+const propertyUrl = "https://api.joshuacattaruzza.com/api/properties/all";
+const createJobUrl = "https://api.joshuacattaruzza.com/api/jobs/create";
 
 const [properties, setProperties] = useState([]);
 const [summary, setSummary] = useState("");

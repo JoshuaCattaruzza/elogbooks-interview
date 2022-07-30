@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import {useNavigate} from 'react-router-dom';
 const Jobs = () =>{
 
-const url = "http://localhost:4200/api/jobs/all";
+const url = "https://api.joshuacattaruzza.com/api/jobs/all";
 
 const [jobs, setJobs] = useState([]);
 const navigate = useNavigate();

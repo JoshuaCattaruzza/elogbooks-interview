@@ -12,8 +12,8 @@ import ToastContainer from 'react-bootstrap/ToastContainer';
 const JobDetail = () =>{
 
 var {id} = useParams();
-const url = "http://localhost:4200/api/jobs/one/";
-const updateStatusUrl = "http://localhost:4200/api/jobs/update/";
+const url = "https://api.joshuacattaruzza.com/api/jobs/one/";
+const updateStatusUrl = "https://api.joshuacattaruzza.com/api/jobs/update/";
 const [job, setJob] = useState({});
 const [status, setStatus] = useState("");
 const [show, setShow] = useState(false);
