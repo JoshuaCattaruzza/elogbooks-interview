@@ -53,7 +53,7 @@ const handleSubmit = (e) =>{
         <Container style={{marginTop: "20px"}} >
              <Form className="text-center">
             <Form.Group >
-                <Form.Label><h4>{job.summary}</h4></Form.Label>
+                <Form.Label><h3>{job.summary}</h3></Form.Label>
             </Form.Group>
             <Form.Group >
                 <Form.Label><h4>{job.description}</h4></Form.Label>

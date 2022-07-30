@@ -6,19 +6,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/esm/Container";
 import JobDetail from "./components/jobDetail";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton';
+import Button from 'react-bootstrap/Button';
 
 function App() {
   return (
     <>
     <Navbar bg="dark" variant="dark">
-      <Container>
+      <Container >
       <ButtonGroup className="mb-2">
       <Link to={"/jobs"}>
-      <ToggleButton variant="light">View Jobs</ToggleButton>
+      <Button variant="light" style={{marginRight:"20px"}}>View Jobs</Button>
       </Link>
       <Link to={"/createJobs"}>
-      <ToggleButton variant="light">Create Job</ToggleButton>
+      <Button variant="light">Create Job</Button>
       </Link>
       </ButtonGroup>
 
