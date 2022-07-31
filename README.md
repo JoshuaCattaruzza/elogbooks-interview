@@ -27,6 +27,8 @@ Test client is currently deployed on a Netlify box [here](https://main--comforti
 
 - npm install
 - npm start
+- to try with server running locally, inside utils directory change baseUrl from "https://api.joshuacattaruzza.com" to "http://localhost:4200"
+
 ## server
 ### inside the server directory:
 
