@@ -1,5 +1,6 @@
 const sql = require("./db.js");
 
+//constructor for job
 const Job = function(job) {
     this.summary = job.summary;
     this.description = job.description;
