@@ -3,15 +3,14 @@ import { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
 import Container from "react-bootstrap/Container";
 import {useNavigate} from 'react-router-dom';
+import { baseUrl } from "../utils/baseUrl";
 const Jobs = () =>{
-
-const url = "https://api.joshuacattaruzza.com/api/jobs/all";
 
 const [jobs, setJobs] = useState([]);
 const navigate = useNavigate();
 
 useEffect(()=>{
-    fetch(url)
+    fetch(baseUrl + "/api/jobs/all")
     .then(res => res.json())
     .then(data => setJobs(data));
 }, [setJobs]);

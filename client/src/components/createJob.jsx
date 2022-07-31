@@ -7,11 +7,9 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
+import { baseUrl } from "../utils/baseUrl";
 
 const CreateJobs = () =>{
-
-const propertyUrl = "https://api.joshuacattaruzza.com/api/properties/all";
-const createJobUrl = "https://api.joshuacattaruzza.com/api/jobs/create";
 
 const [properties, setProperties] = useState([]);
 const [summary, setSummary] = useState("");
@@ -23,7 +21,7 @@ const [show, setShow] = useState(false);
 
 const toggleShow = () => setShow(!show);
 useEffect(()=>{
-    fetch(propertyUrl)
+    fetch(baseUrl + "/api/properties/all")
     .then(res => res.json())
     .then(data => setProperties(data));
 }, [setProperties]);
@@ -31,7 +29,7 @@ useEffect(()=>{
 const handleSubmit = (e) =>{
     e.preventDefault();
 
-    fetch(createJobUrl,{
+    fetch(baseUrl + "/api/jobs/create",{
         method: "POST",
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({

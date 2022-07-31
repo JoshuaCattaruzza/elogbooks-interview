@@ -8,12 +8,11 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
-
+import { baseUrl } from "../utils/baseUrl";
 const JobDetail = () =>{
 
 var {id} = useParams();
-const url = "https://api.joshuacattaruzza.com/api/jobs/one/";
-const updateStatusUrl = "https://api.joshuacattaruzza.com/api/jobs/update/";
+
 const [job, setJob] = useState({});
 const [status, setStatus] = useState("");
 const [show, setShow] = useState(false);
@@ -22,7 +21,7 @@ const [show, setShow] = useState(false);
 const toggleShow = () => setShow(!show);
 
 useEffect(()=>{
-    fetch(url+id)
+    fetch(baseUrl + "/api/jobs/one/" + id)
     .then(res => res.json())
     .then(data => {
         setJob(data);
@@ -37,7 +36,7 @@ const handleSelect = (eventkey) =>{
 const handleSubmit = (e) =>{
     e.preventDefault();
     
-    fetch(updateStatusUrl + id, {
+    fetch(baseUrl + "/api/jobs/update/" + id, {
         method: "PATCH",
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
